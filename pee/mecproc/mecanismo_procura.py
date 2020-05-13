@@ -39,8 +39,8 @@ class MecanismoProcura(object):
             no = self.memoria_procura.remover()
             if problema.objectivo(no.estado):
                 return self._gerar_solucao(no)
-                if no.profundidade < prof_max:
-                    self._expandir(no)
+            if no.profundidade < prof_max:
+                self._expandir(no)
             elif parcial:
                 return self._gerar_solucao(no)
 
